@@ -1,101 +1,40 @@
 import Image from "next/image";
+import homePage from "../../public/jpmain.jpg";
+import { Copyright } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="grid grid-cols-4 sm:grid-cols-3 grid-rows-3 h-screen bg-[#0d3354] place-content-center">
+      <div className="sm:invisible sm:hidden"></div>
+      <div className="text-5xl self-center font-bold order-1 col-span-3 sm:order-none sm:col-span-1 sm:text-7xl">
+        <h1 className="mx-5 pt-3 sm:pt-0 sm:m-5">Ryan Gleeson</h1>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="order-2 col-span-4 sm:order-none sm:col-span-2 sm:ml-auto">
+        <h3 className="italic text-md mt-3 ml-6 text-left sm:text-xl sm:mt-8 sm:text-right sm:mr-9 sm:ml-0 md:text-2xl">
+          A Self-driven programmer that<br></br>tries to make an impact.
+        </h3>
+      </div>
+      <Image
+        src={homePage}
+        alt="Picture of Ryan Gleeson"
+        className="col-span-3 row-span-4 object-cover c-full h-full row-start-1 sm:row-start-auto sm:col-span-2 sm:row-span-2"
+      ></Image>
+      <div className="row-span-2 flex flex-col order-2 col-span-4 mx-8 sm:order-none text-3xl sm:col-span-1 sm:text-3xl md:text-4xl sm:m-0">
+        <div className="ml-auto text-right sm:text-left sm:m-auto">
+          <h1 className="font-bold my-4">Coming soon</h1>
+          <ul className="line-through">
+            <li>Profile</li>
+            <li>Projects</li>
+            <li>Skills</li>
+            <li>Contact</li>
+          </ul>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="flex mx-auto my-3 h-min text-sm md:text-lg">
+          <Copyright className="my-auto mx-2" size={16} />
+          <span className=""> Ryan Gleeson 2024</span>
+        </div>
+      </div>
     </div>
   );
 }
