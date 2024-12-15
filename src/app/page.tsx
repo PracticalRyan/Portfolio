@@ -4,7 +4,7 @@ import { Copyright } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-4 sm:grid-cols-3 grid-rows-3 h-screen bg-[#0d3354] place-content-center">
+    <div className="grid text-white grid-cols-4 sm:grid-cols-3 grid-rows-3 h-screen bg-[#0d3354] place-content-center">
       <div className="sm:invisible sm:hidden"></div>
       <div className="text-5xl self-center font-bold order-1 col-span-3 sm:order-none sm:col-span-1 sm:text-7xl">
         <h1 className="mx-5 pt-3 sm:pt-0 sm:m-5">Ryan Gleeson</h1>
